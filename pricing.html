@@ -1,0 +1,1191 @@
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+<style>
+    .kodjoe-pricing-wrapper * {
+        margin: 0 !important;
+        padding: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    .kodjoe-pricing-wrapper {
+        font-family: 'Poppins', sans-serif !important;
+        background-color: #000 !important;
+        color: #fff !important;
+        padding: 40px 20px !important;
+    }
+
+    .kodjoe-pricing-container {
+        max-width: 1100px !important;
+        margin: 0 auto !important;
+    }
+
+    .kodjoe-pricing-header {
+        text-align: center !important;
+        margin-bottom: 40px !important;
+    }
+
+    .kodjoe-pricing-logo {
+        height: 100px !important;
+        margin-bottom: 30px !important;
+        display: inline-block !important;
+    }
+
+    .kodjoe-pricing-h1 {
+        font-size: 40px !important;
+        font-weight: 600 !important;
+        margin-bottom: 15px !important;
+        color: #fff !important;
+        line-height: 1.2 !important;
+    }
+
+    .kodjoe-pricing-subtitle {
+        font-size: 16px !important;
+        font-weight: 300 !important;
+        line-height: 1.5 !important;
+        max-width: 800px !important;
+        margin: 0 auto !important;
+        color: #fff !important;
+    }
+
+    /* Desktop Table */
+    .kodjoe-pricing-table {
+        width: 100% !important;
+        border-collapse: collapse !important;
+        background: #fff !important;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.3) !important;
+        border: 2px solid #000 !important;
+        font-family: 'Poppins', sans-serif !important;
+    }
+
+    .kodjoe-pricing-table thead {
+        background: #f8f8f8 !important;
+    }
+
+    .kodjoe-pricing-table th {
+        padding: 25px 15px !important;
+        text-align: center !important;
+        vertical-align: top !important;
+        border-right: 2px solid #000 !important;
+        border-bottom: 2px solid #000 !important;
+        background: #f8f8f8 !important;
+        color: #1a1a1a !important;
+        font-weight: 500 !important;
+    }
+
+    .kodjoe-pricing-table th:first-child {
+        background: transparent !important;
+    }
+
+    .kodjoe-pricing-table th:last-child {
+        border-right: none !important;
+    }
+
+    .kodjoe-tier-name {
+        font-size: 22px !important;
+        font-weight: 700 !important;
+        color: #1a1a1a !important;
+        margin-bottom: 8px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 5px !important;
+    }
+
+    .kodjoe-tier-star {
+        color: #ffd700 !important;
+        font-size: 18px !important;
+    }
+
+    .kodjoe-tier-price {
+        font-size: 36px !important;
+        font-weight: 700 !important;
+        color: #1a1a1a !important;
+        margin-bottom: 3px !important;
+    }
+
+    .kodjoe-price-period {
+        font-size: 16px !important;
+        font-weight: 400 !important;
+        color: #1a1a1a !important;
+    }
+
+    .kodjoe-price-details {
+        font-size: 11px !important;
+        color: #666 !important;
+        margin: 6px 0 15px !important;
+        line-height: 1.4 !important;
+    }
+
+    .kodjoe-cta-button {
+        display: inline-flex !important;
+        align-items: center !important;
+        gap: 6px !important;
+        background: #dc2626 !important;
+        color: #fff !important;
+        padding: 9px 25px !important;
+        text-decoration: none !important;
+        border-radius: 6px !important;
+        font-weight: 600 !important;
+        font-size: 13px !important;
+        transition: transform 0.2s ease !important;
+        border: none !important;
+        cursor: pointer !important;
+        font-family: 'Poppins', sans-serif !important;
+    }
+
+    .kodjoe-cta-button:hover {
+        transform: scale(1.05) !important;
+        color: #fff !important;
+        text-decoration: none !important;
+    }
+
+    .kodjoe-pricing-table tbody tr {
+        border-bottom: 2px solid #000 !important;
+    }
+
+    .kodjoe-pricing-table tbody tr:nth-child(odd) {
+        background: #e8f5e9 !important;
+    }
+
+    .kodjoe-pricing-table tbody tr:nth-child(even) {
+        background: #fff !important;
+    }
+
+    .kodjoe-pricing-table td {
+        padding: 10px 12px !important;
+        text-align: center !important;
+        border-right: 2px solid #000 !important;
+        color: #1a1a1a !important;
+        font-size: 14px !important;
+        font-weight: 400 !important;
+    }
+
+    .kodjoe-pricing-table td:first-child {
+        text-align: left !important;
+        font-weight: 500 !important;
+        padding-left: 18px !important;
+    }
+
+    .kodjoe-pricing-table td:last-child {
+        border-right: none !important;
+    }
+
+    .kodjoe-feature-name {
+        font-size: 12px !important;
+        color: #1a1a1a !important;
+        font-weight: 500 !important;
+    }
+
+    .kodjoe-feature-subtext {
+        font-size: 10px !important;
+        color: #666 !important;
+        font-weight: 400 !important;
+        margin-top: 2px !important;
+    }
+
+    .kodjoe-check-icon {
+        color: #3b82f6 !important;
+        font-size: 18px !important;
+        font-weight: 900 !important;
+    }
+
+    .kodjoe-cross-icon {
+        color: #dc2626 !important;
+        font-size: 18px !important;
+        font-weight: 900 !important;
+    }
+
+    .kodjoe-value-text {
+        color: #1a1a1a !important;
+        font-size: 11px !important;
+        font-weight: 500 !important;
+    }
+
+    /* Mobile View */
+    .kodjoe-mobile-pricing {
+        display: none !important;
+    }
+
+    .kodjoe-mobile-tier {
+        background: #fff !important;
+        border: 2px solid #000 !important;
+        margin-bottom: 20px !important;
+        border-radius: 8px !important;
+        overflow: hidden !important;
+    }
+
+    .kodjoe-mobile-tier-header {
+        text-align: center !important;
+        padding: 25px 20px !important;
+        background: #f8f8f8 !important;
+        border-bottom: 2px solid #000 !important;
+    }
+
+    .kodjoe-mobile-tier-name {
+        font-size: 24px !important;
+        font-weight: 700 !important;
+        color: #1a1a1a !important;
+        margin-bottom: 10px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 6px !important;
+    }
+
+    .kodjoe-mobile-price {
+        font-size: 38px !important;
+        font-weight: 700 !important;
+        color: #1a1a1a !important;
+        margin-bottom: 5px !important;
+    }
+
+    .kodjoe-mobile-price-period {
+        font-size: 18px !important;
+        font-weight: 400 !important;
+        color: #1a1a1a !important;
+    }
+
+    .kodjoe-mobile-price-details {
+        font-size: 12px !important;
+        color: #666 !important;
+        margin: 8px 0 15px !important;
+        line-height: 1.4 !important;
+    }
+
+    .kodjoe-mobile-feature-row {
+        padding: 12px 15px !important;
+        border-bottom: 2px solid #000 !important;
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+    }
+
+    .kodjoe-mobile-feature-row:last-child {
+        border-bottom: none !important;
+    }
+
+    .kodjoe-mobile-feature-row:nth-child(odd) {
+        background: #e8f5e9 !important;
+    }
+
+    .kodjoe-mobile-feature-row:nth-child(even) {
+        background: #fff !important;
+    }
+
+    .kodjoe-mobile-feature-text {
+        flex: 1 !important;
+        text-align: left !important;
+    }
+
+    .kodjoe-mobile-feature-name {
+        font-size: 13px !important;
+        font-weight: 500 !important;
+        color: #1a1a1a !important;
+    }
+
+    .kodjoe-mobile-feature-subtext {
+        font-size: 11px !important;
+        color: #666 !important;
+        margin-top: 2px !important;
+    }
+    
+    .kodjoe-mobile-feature-value {
+        margin-left: 10px !important;
+    }
+
+    @media (max-width: 910px) {
+        .kodjoe-pricing-wrapper {
+            padding: 20px 10px !important;
+        }
+
+        .kodjoe-pricing-h1 {
+            font-size: 28px !important;
+        }
+
+        .kodjoe-pricing-subtitle {
+            font-size: 14px !important;
+        }
+
+        .kodjoe-pricing-logo {
+            height: 60px !important;
+        }
+
+        .kodjoe-pricing-table {
+            display: none !important;
+        }
+
+        .kodjoe-mobile-pricing {
+            display: block !important;
+        }
+    }
+
+    /* Testimonials Section */
+    .kodjoe-testimonials-section {
+        margin-top: 80px !important;
+        margin-bottom: 80px !important;
+    }
+
+    .kodjoe-testimonials-header {
+        text-align: center !important;
+        margin-bottom: 40px !important;
+    }
+
+    .kodjoe-testimonials-title {
+        font-size: 40px !important;
+        font-weight: 700 !important;
+        color: #fff !important;
+        margin-bottom: 16px !important;
+        line-height: 1.2 !important;
+    }
+
+    .kodjoe-testimonials-subtitle {
+        font-size: 18px !important;
+        color: #d1d5db !important;
+        line-height: 1.6 !important;
+        max-width: 768px !important;
+        margin: 0 auto !important;
+    }
+
+    .kodjoe-testimonials-grid {
+        display: grid !important;
+        grid-template-columns: repeat(4, 1fr) !important;
+        gap: 24px !important;
+    }
+
+    .kodjoe-testimonial-card {
+        background: #fff !important;
+        border-radius: 8px !important;
+        overflow: hidden !important;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2) !important;
+    }
+
+    .kodjoe-testimonial-video {
+        width: 100% !important;
+        aspect-ratio: 16 / 9 !important;
+        background: #e5e7eb !important;
+    }
+
+    .kodjoe-testimonial-video iframe {
+        width: 100% !important;
+        height: 100% !important;
+        border: none !important;
+        display: block !important;
+    }
+
+    .kodjoe-testimonial-content {
+        padding: 16px !important;
+    }
+
+    .kodjoe-testimonial-name {
+        font-size: 18px !important;
+        font-weight: 700 !important;
+        color: #1a1a1a !important;
+        margin-bottom: 4px !important;
+    }
+
+    .kodjoe-testimonial-role {
+        font-size: 14px !important;
+        color: #6b7280 !important;
+        margin-bottom: 8px !important;
+    }
+
+    .kodjoe-testimonial-quote {
+        font-size: 14px !important;
+        color: #374151 !important;
+        line-height: 1.5 !important;
+    }
+
+    @media (max-width: 910px) {
+        .kodjoe-testimonials-section {
+            margin-top: 48px !important;
+            margin-bottom: 48px !important;
+        }
+
+        .kodjoe-testimonials-title {
+            font-size: 32px !important;
+        }
+
+        .kodjoe-testimonials-subtitle {
+            font-size: 16px !important;
+        }
+
+        .kodjoe-testimonials-grid {
+            grid-template-columns: repeat(2, 1fr) !important;
+            gap: 20px !important;
+        }
+    }
+
+    @media (max-width: 640px) {
+        .kodjoe-testimonials-title {
+            font-size: 28px !important;
+        }
+
+        .kodjoe-testimonials-subtitle {
+            font-size: 14px !important;
+        }
+
+        .kodjoe-testimonials-grid {
+            grid-template-columns: 1fr !important;
+            gap: 16px !important;
+        }
+    }
+
+    /* How to Join Section */
+    .kodjoe-how-to-join-section {
+        margin-top: 80px !important;
+        margin-bottom: 80px !important;
+        background: linear-gradient(to right, #dc2626, #b91c1c) !important;
+        border-radius: 8px !important;
+        padding: 48px 32px !important;
+    }
+
+    .kodjoe-how-to-join-header {
+        text-align: center !important;
+        margin-bottom: 48px !important;
+    }
+
+    .kodjoe-how-to-join-title {
+        font-size: 40px !important;
+        font-weight: 700 !important;
+        color: #fff !important;
+        margin-bottom: 16px !important;
+        line-height: 1.2 !important;
+    }
+
+    .kodjoe-how-to-join-subtitle {
+        font-size: 18px !important;
+        color: #fff !important;
+        line-height: 1.6 !important;
+        max-width: 768px !important;
+        margin: 0 auto !important;
+    }
+
+    .kodjoe-steps-grid {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 32px !important;
+        max-width: 1200px !important;
+        margin: 0 auto !important;
+    }
+
+    .kodjoe-step-card {
+        background: rgba(255, 255, 255, 0.1) !important;
+        backdrop-filter: blur(10px) !important;
+        border-radius: 8px !important;
+        padding: 24px !important;
+        text-align: center !important;
+    }
+
+    .kodjoe-step-number {
+        width: 64px !important;
+        height: 64px !important;
+        background: #fff !important;
+        color: #dc2626 !important;
+        border-radius: 50% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        font-size: 24px !important;
+        font-weight: 700 !important;
+        margin: 0 auto 16px !important;
+    }
+
+    .kodjoe-step-title {
+        font-size: 20px !important;
+        font-weight: 700 !important;
+        color: #fff !important;
+        margin-bottom: 12px !important;
+    }
+
+    .kodjoe-step-description {
+        font-size: 16px !important;
+        color: rgba(255, 255, 255, 0.9) !important;
+        line-height: 1.6 !important;
+    }
+
+    .kodjoe-benefits-list {
+        margin-top: 40px !important;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 24px !important;
+    }
+
+    .kodjoe-benefit-item {
+        display: flex !important;
+        align-items: center !important;
+        gap: 8px !important;
+        color: #fff !important;
+        font-size: 14px !important;
+    }
+
+    .kodjoe-benefit-icon {
+        width: 20px !important;
+        height: 20px !important;
+        flex-shrink: 0 !important;
+    }
+
+    .kodjoe-benefit-icon svg {
+        width: 100% !important;
+        height: 100% !important;
+        stroke: currentColor !important;
+    }
+
+    @media (max-width: 910px) {
+        .kodjoe-how-to-join-section {
+            margin-top: 48px !important;
+            margin-bottom: 48px !important;
+            padding: 32px 20px !important;
+        }
+
+        .kodjoe-how-to-join-title {
+            font-size: 32px !important;
+        }
+
+        .kodjoe-how-to-join-subtitle {
+            font-size: 16px !important;
+        }
+
+        .kodjoe-steps-grid {
+            grid-template-columns: 1fr !important;
+            gap: 24px !important;
+        }
+
+        .kodjoe-step-title {
+            font-size: 18px !important;
+        }
+
+        .kodjoe-step-description {
+            font-size: 14px !important;
+        }
+
+        .kodjoe-benefits-list {
+            flex-direction: column !important;
+            align-items: center !important;
+            gap: 16px !important;
+        }
+    }
+</style>
+
+<div class="kodjoe-pricing-wrapper">
+    <div class="kodjoe-pricing-container">
+        <div class="kodjoe-pricing-header">
+            <img src="https://kopilot.kodjoe.com/static/img/kodjoe_dark.png" alt="Kodjoe English" class="kodjoe-pricing-logo">
+            <h1 class="kodjoe-pricing-h1">Choisissez Votre Formule</h1>
+            <p class="kodjoe-pricing-subtitle">
+                Investissez dans votre avenir avec nos programmes d'anglais personnalisés.<br>
+                Sélectionnez la formule qui vous convient et commencez votre transformation<br>
+                dès aujourd'hui.
+            </p>
+        </div>
+
+        <!-- Desktop Table -->
+        <table class="kodjoe-pricing-table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>
+                        <div class="kodjoe-tier-name">GOLD</div>
+                        <div class="kodjoe-tier-price">297€<span class="kodjoe-price-period"> / mois</span></div>
+                        <div class="kodjoe-price-details">
+                            Chaque mois sur 6 mois<br>
+                            Puis 99€ / mois
+                        </div>
+                        <a href="#" class="kodjoe-cta-button" target="_blank">Choisir GOLD <i class="bi bi-arrow-right"></i></a>
+                    </th>
+                    <th>
+                        <div class="kodjoe-tier-name">PLATINUM <span class="kodjoe-tier-star">⭐</span></div>
+                        <div class="kodjoe-tier-price">497€<span class="kodjoe-price-period"> / mois</span></div>
+                        <div class="kodjoe-price-details">
+                            Chaque mois sur 6 mois<br>
+                            Puis 299€ / mois
+                        </div>
+                        <a href="#" class="kodjoe-cta-button" target="_blank">Choisir PLATINUM <i class="bi bi-arrow-right"></i></a>
+                    </th>
+                    <th>
+                        <div class="kodjoe-tier-name">DIAMOND</div>
+                        <div class="kodjoe-tier-price">997€<span class="kodjoe-price-period"> / mois</span></div>
+                        <div class="kodjoe-price-details">
+                            Chaque mois sur 6 mois<br>
+                            Puis 499€ / mois
+                        </div>
+                        <a href="#" class="kodjoe-cta-button" target="_blank">Choisir DIAMOND <i class="bi bi-arrow-right"></i></a>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="kodjoe-feature-name">Évaluation initiale de votre niveau d'anglais</div>
+                    </td>
+                    <td><i class="bi bi-check-circle-fill kodjoe-check-icon"></i></td>
+                    <td><i class="bi bi-check-circle-fill kodjoe-check-icon"></i></td>
+                    <td><i class="bi bi-check-circle-fill kodjoe-check-icon"></i></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="kodjoe-feature-name">1500+ leçons vidéo structurées (A1 <i class="bi bi-arrow-right"></i> C1)</div>
+                    </td>
+                    <td><i class="bi bi-check-circle-fill kodjoe-check-icon"></i></td>
+                    <td><i class="bi bi-check-circle-fill kodjoe-check-icon"></i></td>
+                    <td><i class="bi bi-check-circle-fill kodjoe-check-icon"></i></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="kodjoe-feature-name">Coaching groupe en ligne</div>
+                        <div class="kodjoe-feature-subtext">2 sessions par semaine: 1h/cour</div>
+                    </td>
+                    <td><i class="bi bi-check-circle-fill kodjoe-check-icon"></i></td>
+                    <td><i class="bi bi-check-circle-fill kodjoe-check-icon"></i></td>
+                    <td><i class="bi bi-check-circle-fill kodjoe-check-icon"></i></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="kodjoe-feature-name">Conversations 24h / 24</div>
+                    </td>
+                    <td><i class="bi bi-check-circle-fill kodjoe-check-icon"></i></td>
+                    <td><i class="bi bi-check-circle-fill kodjoe-check-icon"></i></td>
+                    <td><i class="bi bi-check-circle-fill kodjoe-check-icon"></i></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="kodjoe-feature-name">Corrections personnalisées</div>
+                    </td>
+                    <td><i class="bi bi-check-circle-fill kodjoe-check-icon"></i></td>
+                    <td><i class="bi bi-check-circle-fill kodjoe-check-icon"></i></td>
+                    <td><i class="bi bi-check-circle-fill kodjoe-check-icon"></i></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="kodjoe-feature-name">Remise de Certificat après chaque niveau</div>
+                    </td>
+                    <td><i class="bi bi-check-circle-fill kodjoe-check-icon"></i></td>
+                    <td><i class="bi bi-check-circle-fill kodjoe-check-icon"></i></td>
+                    <td><i class="bi bi-check-circle-fill kodjoe-check-icon"></i></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="kodjoe-feature-name">Garantie de progression</div>
+                        <div class="kodjoe-feature-subtext">1 niveau d'anglais / 8 mois</div>
+                    </td>
+                    <td><i class="bi bi-check-circle-fill kodjoe-check-icon"></i></td>
+                    <td><i class="bi bi-check-circle-fill kodjoe-check-icon"></i></td>
+                    <td><i class="bi bi-check-circle-fill kodjoe-check-icon"></i></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="kodjoe-feature-name">Sessions mensuelles 1-to-1</div>
+                        <div class="kodjoe-feature-subtext">Avec une Coach</div>
+                    </td>
+                    <td><i class="bi bi-x-circle-fill kodjoe-cross-icon"></i></td>
+                    <td><span class="kodjoe-value-text">2 heures</span></td>
+                    <td><span class="kodjoe-value-text">8 heures</span></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="kodjoe-feature-name">Sessions mensuelles 1-to-1</div>
+                        <div class="kodjoe-feature-subtext">Avec Coach Kodjɔ 💜</div>
+                    </td>
+                    <td><i class="bi bi-x-circle-fill kodjoe-cross-icon"></i></td>
+                    <td><span class="kodjoe-value-text">1 heure</span></td>
+                    <td><span class="kodjoe-value-text">4 heures</span></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="kodjoe-feature-name">Sessions mensuelles 1-to-1</div>
+                        <div class="kodjoe-feature-subtext">Avec un Américain</div>
+                    </td>
+                    <td><i class="bi bi-x-circle-fill kodjoe-cross-icon"></i></td>
+                    <td><i class="bi bi-x-circle-fill kodjoe-cross-icon"></i></td>
+                    <td><span class="kodjoe-value-text">2 heures</span></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="kodjoe-feature-name">Immersion à Bali chez Coach Kodjɔ & famille</div>
+                        <div class="kodjoe-feature-subtext">Logement et repas: nous faisons tout ensemble séjour</div>
+                    </td>
+                    <td><i class="bi bi-x-circle-fill kodjoe-cross-icon"></i></td>
+                    <td><i class="bi bi-x-circle-fill kodjoe-cross-icon"></i></td>
+                    <td><span class="kodjoe-value-text">7 jours / an</span></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Mobile View -->
+        <div class="kodjoe-mobile-pricing">
+            <!-- GOLD Tier -->
+            <div class="kodjoe-mobile-tier">
+                <div class="kodjoe-mobile-tier-header">
+                    <div class="kodjoe-mobile-tier-name">GOLD</div>
+                    <div class="kodjoe-mobile-price">297€<span class="kodjoe-mobile-price-period"> / mois</span></div>
+                    <div class="kodjoe-mobile-price-details">
+                        Chaque mois sur 6 mois<br>
+                        Puis 99€ / mois
+                    </div>
+                    <a href="#" class="kodjoe-cta-button" target="_blank">Choisir GOLD <i class="bi bi-arrow-right"></i></a>
+                </div>
+                <div class="kodjoe-mobile-feature-row">
+                    <div class="kodjoe-mobile-feature-text">
+                        <div class="kodjoe-mobile-feature-name">Évaluation initiale de votre niveau d'anglais</div>
+                    </div>
+                    <div class="kodjoe-mobile-feature-value">
+                        <i class="bi bi-check-circle-fill kodjoe-check-icon"></i>
+                    </div>
+                </div>
+                <div class="kodjoe-mobile-feature-row">
+                    <div class="kodjoe-mobile-feature-text">
+                        <div class="kodjoe-mobile-feature-name">1500+ leçons vidéo structurées (A1 <i class="bi bi-arrow-right"></i> C1)</div>
+                    </div>
+                    <div class="kodjoe-mobile-feature-value">
+                        <i class="bi bi-check-circle-fill kodjoe-check-icon"></i>
+                    </div>
+                </div>
+                <div class="kodjoe-mobile-feature-row">
+                    <div class="kodjoe-mobile-feature-text">
+                        <div class="kodjoe-mobile-feature-name">Coaching groupe en ligne</div>
+                        <div class="kodjoe-mobile-feature-subtext">2 sessions par semaine: 1h/cour</div>
+                    </div>
+                    <div class="kodjoe-mobile-feature-value">
+                        <i class="bi bi-check-circle-fill kodjoe-check-icon"></i>
+                    </div>
+                </div>
+                <div class="kodjoe-mobile-feature-row">
+                    <div class="kodjoe-mobile-feature-text">
+                        <div class="kodjoe-mobile-feature-name">Conversations 24h / 24</div>
+                    </div>
+                    <div class="kodjoe-mobile-feature-value">
+                        <i class="bi bi-check-circle-fill kodjoe-check-icon"></i>
+                    </div>
+                </div>
+                <div class="kodjoe-mobile-feature-row">
+                    <div class="kodjoe-mobile-feature-text">
+                        <div class="kodjoe-mobile-feature-name">Corrections personnalisées</div>
+                    </div>
+                    <div class="kodjoe-mobile-feature-value">
+                        <i class="bi bi-check-circle-fill kodjoe-check-icon"></i>
+                    </div>
+                </div>
+                <div class="kodjoe-mobile-feature-row">
+                    <div class="kodjoe-mobile-feature-text">
+                        <div class="kodjoe-mobile-feature-name">Remise de Certificat après chaque niveau</div>
+                    </div>
+                    <div class="kodjoe-mobile-feature-value">
+                        <i class="bi bi-check-circle-fill kodjoe-check-icon"></i>
+                    </div>
+                </div>
+                <div class="kodjoe-mobile-feature-row">
+                    <div class="kodjoe-mobile-feature-text">
+                        <div class="kodjoe-mobile-feature-name">Garantie de progression</div>
+                        <div class="kodjoe-mobile-feature-subtext">1 niveau d'anglais / 8 mois</div>
+                    </div>
+                    <div class="kodjoe-mobile-feature-value">
+                        <i class="bi bi-check-circle-fill kodjoe-check-icon"></i>
+                    </div>
+                </div>
+                <div class="kodjoe-mobile-feature-row">
+                    <div class="kodjoe-mobile-feature-text">
+                        <div class="kodjoe-mobile-feature-name">Sessions mensuelles 1-to-1</div>
+                        <div class="kodjoe-mobile-feature-subtext">Avec une Coach</div>
+                    </div>
+                    <div class="kodjoe-mobile-feature-value">
+                        <i class="bi bi-x-circle-fill kodjoe-cross-icon"></i>
+                    </div>
+                </div>
+                <div class="kodjoe-mobile-feature-row">
+                    <div class="kodjoe-mobile-feature-text">
+                        <div class="kodjoe-mobile-feature-name">Sessions mensuelles 1-to-1</div>
+                        <div class="kodjoe-mobile-feature-subtext">Avec Coach Kodjɔ 💜</div>
+                    </div>
+                    <div class="kodjoe-mobile-feature-value">
+                        <i class="bi bi-x-circle-fill kodjoe-cross-icon"></i>
+                    </div>
+                </div>
+                <div class="kodjoe-mobile-feature-row">
+                    <div class="kodjoe-mobile-feature-text">
+                        <div class="kodjoe-mobile-feature-name">Sessions mensuelles 1-to-1</div>
+                        <div class="kodjoe-mobile-feature-subtext">Avec un Américain</div>
+                    </div>
+                    <div class="kodjoe-mobile-feature-value">
+                        <i class="bi bi-x-circle-fill kodjoe-cross-icon"></i>
+                    </div>
+                </div>
+                <div class="kodjoe-mobile-feature-row">
+                    <div class="kodjoe-mobile-feature-text">
+                        <div class="kodjoe-mobile-feature-name">Immersion à Bali chez Coach Kodjɔ & famille</div>
+                        <div class="kodjoe-mobile-feature-subtext">Logement et repas: nous faisons tout ensemble séjour</div>
+                    </div>
+                    <div class="kodjoe-mobile-feature-value">
+                        <i class="bi bi-x-circle-fill kodjoe-cross-icon"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PLATINUM Tier -->
+            <div class="kodjoe-mobile-tier">
+                <div class="kodjoe-mobile-tier-header">
+                    <div class="kodjoe-mobile-tier-name">PLATINUM <span class="kodjoe-tier-star">⭐</span></div>
+                    <div class="kodjoe-mobile-price">497€<span class="kodjoe-mobile-price-period"> / mois</span></div>
+                    <div class="kodjoe-mobile-price-details">
+                        Chaque mois sur 6 mois<br>
+                        Puis 299€ / mois
+                    </div>
+                    <a href="#" class="kodjoe-cta-button" target="_blank">Choisir PLATINUM <i class="bi bi-arrow-right"></i></a>
+                </div>
+                <div class="kodjoe-mobile-feature-row">
+                    <div class="kodjoe-mobile-feature-text">
+                        <div class="kodjoe-mobile-feature-name">Évaluation initiale de votre niveau d'anglais</div>
+                    </div>
+                    <div class="kodjoe-mobile-feature-value">
+                        <i class="bi bi-check-circle-fill kodjoe-check-icon"></i>
+                    </div>
+                </div>
+                <div class="kodjoe-mobile-feature-row">
+                    <div class="kodjoe-mobile-feature-text">
+                        <div class="kodjoe-mobile-feature-name">1500+ leçons vidéo structurées (A1 <i class="bi bi-arrow-right"></i> C1)</div>
+                    </div>
+                    <div class="kodjoe-mobile-feature-value">
+                        <i class="bi bi-check-circle-fill kodjoe-check-icon"></i>
+                    </div>
+                </div>
+                <div class="kodjoe-mobile-feature-row">
+                    <div class="kodjoe-mobile-feature-text">
+                        <div class="kodjoe-mobile-feature-name">Coaching groupe en ligne</div>
+                        <div class="kodjoe-mobile-feature-subtext">2 sessions par semaine: 1h/cour</div>
+                    </div>
+                    <div class="kodjoe-mobile-feature-value">
+                        <i class="bi bi-check-circle-fill kodjoe-check-icon"></i>
+                    </div>
+                </div>
+                <div class="kodjoe-mobile-feature-row">
+                    <div class="kodjoe-mobile-feature-text">
+                        <div class="kodjoe-mobile-feature-name">Conversations 24h / 24</div>
+                    </div>
+                    <div class="kodjoe-mobile-feature-value">
+                        <i class="bi bi-check-circle-fill kodjoe-check-icon"></i>
+                    </div>
+                </div>
+                <div class="kodjoe-mobile-feature-row">
+                    <div class="kodjoe-mobile-feature-text">
+                        <div class="kodjoe-mobile-feature-name">Corrections personnalisées</div>
+                    </div>
+                    <div class="kodjoe-mobile-feature-value">
+                        <i class="bi bi-check-circle-fill kodjoe-check-icon"></i>
+                    </div>
+                </div>
+                <div class="kodjoe-mobile-feature-row">
+                    <div class="kodjoe-mobile-feature-text">
+                        <div class="kodjoe-mobile-feature-name">Remise de Certificat après chaque niveau</div>
+                    </div>
+                    <div class="kodjoe-mobile-feature-value">
+                        <i class="bi bi-check-circle-fill kodjoe-check-icon"></i>
+                    </div>
+                </div>
+                <div class="kodjoe-mobile-feature-row">
+                    <div class="kodjoe-mobile-feature-text">
+                        <div class="kodjoe-mobile-feature-name">Garantie de progression</div>
+                        <div class="kodjoe-mobile-feature-subtext">1 niveau d'anglais / 8 mois</div>
+                    </div>
+                    <div class="kodjoe-mobile-feature-value">
+                        <i class="bi bi-check-circle-fill kodjoe-check-icon"></i>
+                    </div>
+                </div>
+                <div class="kodjoe-mobile-feature-row">
+                    <div class="kodjoe-mobile-feature-text">
+                        <div class="kodjoe-mobile-feature-name">Sessions mensuelles 1-to-1</div>
+                        <div class="kodjoe-mobile-feature-subtext">Avec une Coach</div>
+                    </div>
+                    <div class="kodjoe-mobile-feature-value">
+                        <span class="kodjoe-value-text">2 heures</span>
+                    </div>
+                </div>
+                <div class="kodjoe-mobile-feature-row">
+                    <div class="kodjoe-mobile-feature-text">
+                        <div class="kodjoe-mobile-feature-name">Sessions mensuelles 1-to-1</div>
+                        <div class="kodjoe-mobile-feature-subtext">Avec Coach Kodjɔ 💜</div>
+                    </div>
+                    <div class="kodjoe-mobile-feature-value">
+                        <span class="kodjoe-value-text">1 heure</span>
+                    </div>
+                </div>
+                <div class="kodjoe-mobile-feature-row">
+                    <div class="kodjoe-mobile-feature-text">
+                        <div class="kodjoe-mobile-feature-name">Sessions mensuelles 1-to-1</div>
+                        <div class="kodjoe-mobile-feature-subtext">Avec un Américain</div>
+                    </div>
+                    <div class="kodjoe-mobile-feature-value">
+                        <i class="bi bi-x-circle-fill kodjoe-cross-icon"></i>
+                    </div>
+                </div>
+                <div class="kodjoe-mobile-feature-row">
+                    <div class="kodjoe-mobile-feature-text">
+                        <div class="kodjoe-mobile-feature-name">Immersion à Bali chez Coach Kodjɔ & famille</div>
+                        <div class="kodjoe-mobile-feature-subtext">Logement et repas: nous faisons tout ensemble séjour</div>
+                    </div>
+                    <div class="kodjoe-mobile-feature-value">
+                        <i class="bi bi-x-circle-fill kodjoe-cross-icon"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DIAMOND Tier -->
+            <div class="kodjoe-mobile-tier">
+                <div class="kodjoe-mobile-tier-header">
+                    <div class="kodjoe-mobile-tier-name">DIAMOND</div>
+                    <div class="kodjoe-mobile-price">997€<span class="kodjoe-mobile-price-period"> / mois</span></div>
+                    <div class="kodjoe-mobile-price-details">
+                        Chaque mois sur 6 mois<br>
+                        Puis 499€ / mois
+                    </div>
+                    <a href="#" class="kodjoe-cta-button" target="_blank">Choisir DIAMOND <i class="bi bi-arrow-right"></i></a>
+                </div>
+                <div class="kodjoe-mobile-feature-row">
+                    <div class="kodjoe-mobile-feature-text">
+                        <div class="kodjoe-mobile-feature-name">Évaluation initiale de votre niveau d'anglais</div>
+                    </div>
+                    <div class="kodjoe-mobile-feature-value">
+                        <i class="bi bi-check-circle-fill kodjoe-check-icon"></i>
+                    </div>
+                </div>
+                <div class="kodjoe-mobile-feature-row">
+                    <div class="kodjoe-mobile-feature-text">
+                        <div class="kodjoe-mobile-feature-name">1500+ leçons vidéo structurées (A1 <i class="bi bi-arrow-right"></i> C1)</div>
+                    </div>
+                    <div class="kodjoe-mobile-feature-value">
+                        <i class="bi bi-check-circle-fill kodjoe-check-icon"></i>
+                    </div>
+                </div>
+                <div class="kodjoe-mobile-feature-row">
+                    <div class="kodjoe-mobile-feature-text">
+                        <div class="kodjoe-mobile-feature-name">Coaching groupe en ligne</div>
+                        <div class="kodjoe-mobile-feature-subtext">2 sessions par semaine: 1h/cour</div>
+                    </div>
+                    <div class="kodjoe-mobile-feature-value">
+                        <i class="bi bi-check-circle-fill kodjoe-check-icon"></i>
+                    </div>
+                </div>
+                <div class="kodjoe-mobile-feature-row">
+                    <div class="kodjoe-mobile-feature-text">
+                        <div class="kodjoe-mobile-feature-name">Conversations 24h / 24</div>
+                    </div>
+                    <div class="kodjoe-mobile-feature-value">
+                        <i class="bi bi-check-circle-fill kodjoe-check-icon"></i>
+                    </div>
+                </div>
+                <div class="kodjoe-mobile-feature-row">
+                    <div class="kodjoe-mobile-feature-text">
+                        <div class="kodjoe-mobile-feature-name">Corrections personnalisées</div>
+                    </div>
+                    <div class="kodjoe-mobile-feature-value">
+                        <i class="bi bi-check-circle-fill kodjoe-check-icon"></i>
+                    </div>
+                </div>
+                <div class="kodjoe-mobile-feature-row">
+                    <div class="kodjoe-mobile-feature-text">
+                        <div class="kodjoe-mobile-feature-name">Remise de Certificat après chaque niveau</div>
+                    </div>
+                    <div class="kodjoe-mobile-feature-value">
+                        <i class="bi bi-check-circle-fill kodjoe-check-icon"></i>
+                    </div>
+                </div>
+                <div class="kodjoe-mobile-feature-row">
+                    <div class="kodjoe-mobile-feature-text">
+                        <div class="kodjoe-mobile-feature-name">Garantie de progression</div>
+                        <div class="kodjoe-mobile-feature-subtext">1 niveau d'anglais / 8 mois</div>
+                    </div>
+                    <div class="kodjoe-mobile-feature-value">
+                        <i class="bi bi-check-circle-fill kodjoe-check-icon"></i>
+                    </div>
+                </div>
+                <div class="kodjoe-mobile-feature-row">
+                    <div class="kodjoe-mobile-feature-text">
+                        <div class="kodjoe-mobile-feature-name">Sessions mensuelles 1-to-1</div>
+                        <div class="kodjoe-mobile-feature-subtext">Avec une Coach</div>
+                    </div>
+                    <div class="kodjoe-mobile-feature-value">
+                        <span class="kodjoe-value-text">8 heures</span>
+                    </div>
+                </div>
+                <div class="kodjoe-mobile-feature-row">
+                    <div class="kodjoe-mobile-feature-text">
+                        <div class="kodjoe-mobile-feature-name">Sessions mensuelles 1-to-1</div>
+                        <div class="kodjoe-mobile-feature-subtext">Avec Coach Kodjɔ 💜</div>
+                    </div>
+                    <div class="kodjoe-mobile-feature-value">
+                        <span class="kodjoe-value-text">4 heures</span>
+                    </div>
+                </div>
+                <div class="kodjoe-mobile-feature-row">
+                    <div class="kodjoe-mobile-feature-text">
+                        <div class="kodjoe-mobile-feature-name">Sessions mensuelles 1-to-1</div>
+                        <div class="kodjoe-mobile-feature-subtext">Avec un Américain</div>
+                    </div>
+                    <div class="kodjoe-mobile-feature-value">
+                        <span class="kodjoe-value-text">2 heures</span>
+                    </div>
+                </div>
+                <div class="kodjoe-mobile-feature-row">
+                    <div class="kodjoe-mobile-feature-text">
+                        <div class="kodjoe-mobile-feature-name">Immersion à Bali chez Coach Kodjɔ & famille</div>
+                        <div class="kodjoe-mobile-feature-subtext">Logement et repas: nous faisons tout ensemble séjour</div>
+                    </div>
+                    <div class="kodjoe-mobile-feature-value">
+                        <span class="kodjoe-value-text">7 jours / an</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Testimonials Section -->
+        <div class="kodjoe-testimonials-section">
+            <div class="kodjoe-testimonials-header">
+                <h2 class="kodjoe-testimonials-title">Ils Ont Transformé Leur Anglais</h2>
+                <p class="kodjoe-testimonials-subtitle">
+                    Ces étudiants font partie des milliers de personnes qui ont changé leur vie grâce à notre programme d'anglais.
+                </p>
+            </div>
+
+            <div class="kodjoe-testimonials-grid">
+                <!-- Testimonial 1 -->
+                <div class="kodjoe-testimonial-card">
+                    <div class="kodjoe-testimonial-video">
+                        <iframe 
+                            src="https://fast.wistia.net/embed/iframe/uvx7r224a9" 
+                            title="Témoignage Sonia Ravin" 
+                            allow="autoplay; fullscreen" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="kodjoe-testimonial-content">
+                        <h3 class="kodjoe-testimonial-name">Sonia Ravin</h3>
+                        <p class="kodjoe-testimonial-role">Étudiante KodjoEnglish</p>
+                        <p class="kodjoe-testimonial-quote">"Rejoindre le programme a littéralement changé ma vie"</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="kodjoe-testimonial-card">
+                    <div class="kodjoe-testimonial-video">
+                        <iframe 
+                            src="https://fast.wistia.net/embed/iframe/dp0t10tu2v" 
+                            title="Témoignage Malick Soumaré" 
+                            allow="autoplay; fullscreen" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="kodjoe-testimonial-content">
+                        <h3 class="kodjoe-testimonial-name">Malick Soumaré</h3>
+                        <p class="kodjoe-testimonial-role">Étudiant KodjoEnglish</p>
+                        <p class="kodjoe-testimonial-quote">"Ce programme est pour ceux qui souhaitent devenir une meilleure version d'eux-mêmes."</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="kodjoe-testimonial-card">
+                    <div class="kodjoe-testimonial-video">
+                        <iframe 
+                            src="https://fast.wistia.net/embed/iframe/i85gpceszo" 
+                            title="Témoignage Ikram Dekhissi" 
+                            allow="autoplay; fullscreen" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="kodjoe-testimonial-content">
+                        <h3 class="kodjoe-testimonial-name">Ikram Dekhissi</h3>
+                        <p class="kodjoe-testimonial-role">Étudiante KodjoEnglish</p>
+                        <p class="kodjoe-testimonial-quote">"Je me suis exprimée en anglais pendant une heure à un entretien d'embauche"</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="kodjoe-testimonial-card">
+                    <div class="kodjoe-testimonial-video">
+                        <iframe 
+                            src="https://fast.wistia.net/embed/iframe/k98oe5kjvo" 
+                            title="Témoignage Majoline Gusse" 
+                            allow="autoplay; fullscreen" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="kodjoe-testimonial-content">
+                        <h3 class="kodjoe-testimonial-name">Majoline Gusse</h3>
+                        <p class="kodjoe-testimonial-role">Étudiante KodjoEnglish</p>
+                        <p class="kodjoe-testimonial-quote">"La magie du programme réside dans son aspect réseau."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- How to Join Section -->
+        <div class="kodjoe-how-to-join-section">
+            <div class="kodjoe-how-to-join-header">
+                <h2 class="kodjoe-how-to-join-title">Comment Rejoindre Le Programme ?</h2>
+                <p class="kodjoe-how-to-join-subtitle">
+                    Un processus simple en 3 étapes pour commencer votre transformation
+                </p>
+            </div>
+
+            <div class="kodjoe-steps-grid">
+                <!-- Step 1 -->
+                <div class="kodjoe-step-card">
+                    <div class="kodjoe-step-number">1</div>
+                    <h3 class="kodjoe-step-title">Inscrivez-vous</h3>
+                    <p class="kodjoe-step-description">
+                        Cliquez sur le bouton de votre formule ci-dessus. Le programme fonctionne par cycles de 6 mois, dans un cadre structuré et progressif, avec possibilité de continuer au-delà du premier cycle.
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="kodjoe-step-card">
+                    <div class="kodjoe-step-number">2</div>
+                    <h3 class="kodjoe-step-title">Évaluation de niveau</h3>
+                    <p class="kodjoe-step-description">
+                        Un membre de l'équipe vous contactera pour un entretien téléphonique afin de déterminer votre niveau d'anglais. Vous connaîtrez alors votre groupe et la date de démarrage.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="kodjoe-step-card">
+                    <div class="kodjoe-step-number">3</div>
+                    <h3 class="kodjoe-step-title">Démarrez le programme</h3>
+                    <p class="kodjoe-step-description">
+                        Intégrez votre groupe au démarrage de la prochaine cohorte (février, avril, juin, août, octobre, décembre). Bénéficiez d'un coaching structuré et pratiquez au quotidien.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Benefits List -->
+            <div class="kodjoe-benefits-list">
+                <div class="kodjoe-benefit-item">
+                    <div class="kodjoe-benefit-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 6 9 17l-5-5"></path>
+                        </svg>
+                    </div>
+                    <span>Paiement sécurisé</span>
+                </div>
+                <div class="kodjoe-benefit-item">
+                    <div class="kodjoe-benefit-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 6 9 17l-5-5"></path>
+                        </svg>
+                    </div>
+                    <span>Évaluation personnalisée</span>
+                </div>
+                <div class="kodjoe-benefit-item">
+                    <div class="kodjoe-benefit-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 6 9 17l-5-5"></path>
+                        </svg>
+                    </div>
+                    <span>Garantie de progression</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
