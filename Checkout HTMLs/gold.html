@@ -335,6 +335,15 @@
                 text-align: left !important;
             }
         }
+
+        /* Force modal to top, kill backdrop */
+        .ui-library-styles-r5tl5b {
+            top: 20% !important;
+        }
+
+        .ui-library-styles-jsltdt {
+            background-color: rgba(0, 0, 0, 0) !important;
+        }
     </style>
     <div class="checkout-wrapper">
         <!-- Left Panel - Order Summary -->
@@ -403,3 +412,18 @@
             </div>
         </div>
     </div>
+    <script>
+(function() {
+    setInterval(function() {
+        var iframe = document.querySelector('sc-checkout iframe');
+        if (!iframe || !iframe.contentDocument) return;
+        var doc = iframe.contentDocument;
+
+        var modal = doc.querySelector('.ui-library-styles-r5tl5b');
+        if (modal) modal.style.top = '20%';
+
+        var backdrop = doc.querySelector('.ui-library-styles-jsltdt');
+        if (backdrop) backdrop.style.backgroundColor = 'rgba(0, 0, 0, 0)';
+    }, 16);
+})();
+</script>
