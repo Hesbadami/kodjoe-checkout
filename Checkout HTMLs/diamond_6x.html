@@ -136,6 +136,18 @@
             margin-right: 8px;
         }
 
+        .passe-checkout__badge-save {
+            display: inline-block;
+            background: #16a34a;
+            color: white;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 12px;
+            margin-left: 8px;
+            vertical-align: middle;
+        }
+
         .passe-checkout__summary {
             padding: 50px 40px 30px 40px;
         }
@@ -225,27 +237,20 @@
             font-size: 15px;
         }
 
-        .passe-checkout__total-section {
-            margin-top: 12px;
-            padding-top: 20px;
-            border-top: 1px solid #e8e8e8;
+        .passe-checkout__discount {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 6px 0;
+            color: #16a34a;
+            font-size: 14px;
+            font-weight: 600;
         }
 
         .passe-checkout__row {
             display: flex;
             justify-content: space-between;
             align-items: center;
-        }
-
-        .passe-checkout__total-label {
-            font-size: 15px;
-            color: #555;
-        }
-
-        .passe-checkout__total-amount {
-            font-size: 16px;
-            font-weight: 600;
-            color: #2d2d2d;
         }
 
         .passe-checkout__recurring {
@@ -377,6 +382,11 @@
                 font-size: 18px;
                 bottom: -40px;
             }
+            .passe-checkout__badge-save {
+                font-size: 10px;
+                padding: 3px 8px;
+                margin-left: 5px;
+            }
             
             .passe-checkout__notice {
                 padding: 15px;
@@ -411,7 +421,8 @@
                         </div>
                         <div class="passe-checkout__badge">
                             <span class="passe-checkout__badge-plan">Diamant</span>
-                            <span>€997/mois</span>
+                            <span>€797/mois</span>
+                            <span class="passe-checkout__badge-save">−20%</span>
                         </div>
                     </div>
 
@@ -421,11 +432,11 @@
 
                         <!-- Billing Toggle -->
                         <div class="passe-billing-toggle">
-                            <a href="/diamant" class="passe-billing-toggle__option is-active">
+                            <a href="/diamant" class="passe-billing-toggle__option">
                                 Mensuel
                                 <small>€997 / mois</small>
                             </a>
-                            <a href="/diamond-6x" class="passe-billing-toggle__option">
+                            <a href="/diamant-6x" class="passe-billing-toggle__option is-active">
                                 Mensuel (6 mois prépayés) <span class="passe-billing-toggle__save">−20%</span>
                                 <small>Économisez €1197 sur 6 mois</small>
                             </a>
@@ -433,23 +444,21 @@
                         
                         <div class="passe-checkout__item">
                             <span class="passe-checkout__item-name">PASSE Diamant</span>
-                            <span class="passe-checkout__item-price">€997/mois</span>
+                            <span class="passe-checkout__item-price">€797/mois</span>
                         </div>
 
-                        <div class="passe-checkout__total-section">
-                            <div class="passe-checkout__row">
-                                <span class="passe-checkout__total-label">Total</span>
-                                <span class="passe-checkout__total-amount">€997</span>
-                            </div>
+                        <div class="passe-checkout__discount">
+                            <span>Vous économisez sur 6 mois</span>
+                            <span>−€1197</span>
                         </div>
 
                         <div class="passe-checkout__recurring">
                             <div class="passe-checkout__row">
                                 <div>
-                                    <div class="passe-checkout__recurring-label">Montant dû maintenant</div>
-                                    <div class="passe-checkout__recurring-description">Puis 5 paiements de €997/mois</div>
+                                    <div class="passe-checkout__recurring-label">Modalité de paiement</div>
+                                    <div class="passe-checkout__recurring-description">6 mois prépayés en une fois</div>
                                 </div>
-                                <div class="passe-checkout__recurring-amount">EUR €997</div>
+                                <div class="passe-checkout__recurring-amount">EUR €797/mois</div>
                             </div>
                         </div>
 
@@ -457,7 +466,7 @@
                         <div class="passe-checkout__notice">
                             <div class="passe-checkout__notice-title">Récapitulatif des conditions tarifaires:</div>
                             <div class="passe-checkout__notice-text">
-                                <b>Votre inscription sera validée par le règlement du premier versement de €997</b>. Elle sera suivie de 5 mensualités de €997, prélevées automatiquement.
+                                <b>Votre inscription sera validée par un règlement unique couvrant 6 mois d'accès au programme PASSE Diamant, soit l'équivalent de €797/mois</b> (économie de €1197 sur 6 mois par rapport au paiement mensuel).
                             </div>
                         </div>
 
@@ -474,7 +483,7 @@
         <!-- Right Panel - SamCart Checkout Form -->
         <div class="samcart-panel">
             <div class="samcart-container">
-                <sc-checkout product="diamant" subdomain="kodjoenglish" coupon=""></sc-checkout>
+                <sc-checkout product="diamond-6x" subdomain="kodjoenglish" coupon=""></sc-checkout>
             </div>
         </div>
     </div>

@@ -1,5 +1,4 @@
 <script defer="defer" src="https://static.samcart.com/checkouts/sc-checkout.js"></script>
-    
     <style>
         * {
             margin: 0;
@@ -47,7 +46,7 @@
         }
 
         .passe-checkout__header {
-            background: linear-gradient(165deg, #2a3540 0%, #4a5d70 15%, #d8e8f5 35%, #a8c5e0 50%, #f0f7fc 65%, #4a5d70 85%, #2a3540 100%);
+            background: linear-gradient(165deg, #1a1a1a 0%, #4a4a4a 15%, #e8e8e8 35%, #b8b8b8 50%, #f5f5f5 65%, #4a4a4a 85%, #1a1a1a 100%);
             padding: 80px 40px 40px 40px;
             text-align: center;
             position: relative;
@@ -55,10 +54,10 @@
         }
 
         .passe-checkout__header::before {
-            content: 'Diamant';
+            content: 'Platinum';
             position: absolute;
-            font-size: 150px;
-            color: rgba(14, 47, 78, 0.08);
+            font-size: 140px;
+            color: rgba(74, 74, 74, 0.15);
             top: 40%;
             left: 50%;
             transform: translate(-50%, -40%);
@@ -75,10 +74,10 @@
         .passe-checkout__logo-title {
             font-size: clamp(64px, 8vw, 120px) !important;
             font-weight: 700 !important;
-            color: #2d2d2d !important;
+            color: white !important;
             letter-spacing: -1px !important;
             margin-bottom: -16px !important;
-            text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.8) !important;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3) !important;
             white-space: nowrap !important;
             line-height: normal !important;
             text-transform: none !important;
@@ -88,7 +87,7 @@
             display: inline-block;
             width: 8px;
             height: 8px;
-            background-color: #2d2d2d;
+            background-color: white;
             border-radius: 50%;
             margin: 0 4px;
             vertical-align: baseline;
@@ -99,8 +98,8 @@
             font-size: 16px;
             letter-spacing: 1px;
 
-            background: rgb(43, 42, 42);
-            color: #ffffff;
+            background: white;
+            color: #2d2d2d;
             padding: 8px 16px;
             border-radius: 50px;
             display: inline-block;
@@ -134,6 +133,18 @@
         .passe-checkout__badge-plan {
             color: #888;
             margin-right: 8px;
+        }
+
+        .passe-checkout__badge-save {
+            display: inline-block;
+            background: #16a34a;
+            color: white;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 12px;
+            margin-left: 8px;
+            vertical-align: middle;
         }
 
         .passe-checkout__summary {
@@ -223,6 +234,16 @@
             color: #2d2d2d;
             font-weight: 600;
             font-size: 15px;
+        }
+
+        .passe-checkout__discount {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 6px 0;
+            color: #16a34a;
+            font-size: 14px;
+            font-weight: 600;
         }
 
         .passe-checkout__total-section {
@@ -377,6 +398,11 @@
                 font-size: 18px;
                 bottom: -40px;
             }
+            .passe-checkout__badge-save {
+                font-size: 10px;
+                padding: 3px 8px;
+                margin-left: 5px;
+            }
             
             .passe-checkout__notice {
                 padding: 15px;
@@ -398,6 +424,8 @@
             }
         }
     </style>
+</head>
+<body>
     <div class="checkout-wrapper">
         <!-- Left Panel - Order Summary -->
         <div class="passe-checkout">
@@ -410,8 +438,9 @@
                             <p class="passe-checkout__logo-subtitle">Programme D'Accompagnement Pour Le Succès En Anglais</p>
                         </div>
                         <div class="passe-checkout__badge">
-                            <span class="passe-checkout__badge-plan">Diamant</span>
-                            <span>€997/mois</span>
+                            <span class="passe-checkout__badge-plan">Platinum</span>
+                            <span>€397/mois</span>
+                            <span class="passe-checkout__badge-save">−20%</span>
                         </div>
                     </div>
 
@@ -421,35 +450,33 @@
 
                         <!-- Billing Toggle -->
                         <div class="passe-billing-toggle">
-                            <a href="/diamant" class="passe-billing-toggle__option is-active">
+                            <a href="/platinum" class="passe-billing-toggle__option">
                                 Mensuel
-                                <small>€997 / mois</small>
+                                <small>€497 / mois</small>
                             </a>
-                            <a href="/diamond-6x" class="passe-billing-toggle__option">
+                            <a href="/platinum-6x" class="passe-billing-toggle__option is-active">
                                 Mensuel (6 mois prépayés) <span class="passe-billing-toggle__save">−20%</span>
-                                <small>Économisez €1197 sur 6 mois</small>
+                                <small>Économisez €597 sur 6 mois</small>
                             </a>
                         </div>
                         
                         <div class="passe-checkout__item">
-                            <span class="passe-checkout__item-name">PASSE Diamant</span>
-                            <span class="passe-checkout__item-price">€997/mois</span>
+                            <span class="passe-checkout__item-name">PASSE Platinum</span>
+                            <span class="passe-checkout__item-price">€397/mois</span>
                         </div>
 
-                        <div class="passe-checkout__total-section">
-                            <div class="passe-checkout__row">
-                                <span class="passe-checkout__total-label">Total</span>
-                                <span class="passe-checkout__total-amount">€997</span>
-                            </div>
+                        <div class="passe-checkout__discount">
+                            <span>Vous économisez sur 6 mois</span>
+                            <span>−€597</span>
                         </div>
 
                         <div class="passe-checkout__recurring">
                             <div class="passe-checkout__row">
                                 <div>
-                                    <div class="passe-checkout__recurring-label">Montant dû maintenant</div>
-                                    <div class="passe-checkout__recurring-description">Puis 5 paiements de €997/mois</div>
+                                    <div class="passe-checkout__recurring-label">Modalité de paiement</div>
+                                    <div class="passe-checkout__recurring-description">6 mois prépayés en une fois</div>
                                 </div>
-                                <div class="passe-checkout__recurring-amount">EUR €997</div>
+                                <div class="passe-checkout__recurring-amount">EUR €397/mois</div>
                             </div>
                         </div>
 
@@ -457,7 +484,7 @@
                         <div class="passe-checkout__notice">
                             <div class="passe-checkout__notice-title">Récapitulatif des conditions tarifaires:</div>
                             <div class="passe-checkout__notice-text">
-                                <b>Votre inscription sera validée par le règlement du premier versement de €997</b>. Elle sera suivie de 5 mensualités de €997, prélevées automatiquement.
+                                <b>Votre inscription sera validée par un règlement unique couvrant 6 mois d'accès au programme PASSE Platinum, soit l'équivalent de €397/mois</b> (économie de €597 sur 6 mois par rapport au paiement mensuel).
                             </div>
                         </div>
 
@@ -465,7 +492,7 @@
                         <div class="passe-checkout__guarantee">
                             <img src="http://kopilot.kodjoe.com/static/img/guarantee.png" alt="Garantie 100% satisfaction">
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
@@ -474,7 +501,7 @@
         <!-- Right Panel - SamCart Checkout Form -->
         <div class="samcart-panel">
             <div class="samcart-container">
-                <sc-checkout product="diamant" subdomain="kodjoenglish" coupon=""></sc-checkout>
+                <sc-checkout product="platinum-6x" subdomain="kodjoenglish" coupon=""></sc-checkout>
             </div>
         </div>
     </div>

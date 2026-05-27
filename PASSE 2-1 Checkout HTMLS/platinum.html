@@ -1,0 +1,342 @@
+<script defer="defer" src="https://static.samcart.com/checkouts/sc-checkout.js"></script>
+<script src="https://fast.wistia.net/player.js" async></script>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        background: white;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+    }
+
+    .checkout-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        min-height: 100vh;
+        gap: 0;
+        align-items: start;
+        width: 100%;
+        max-width: 1280px;
+    }
+
+    /* Left Panel */
+    .passe-checkout {
+        background: white;
+        padding: 40px 0px 40px 20px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .passe-checkout__container {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .passe-checkout__card {
+        background: #f5f5f5;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    /* Logo Header - fixed 1.294:1 aspect ratio, container-query scaled */
+    .passe-checkout__header {
+        background: linear-gradient(165deg, #1a1a1a 0%, #4a4a4a 15%, #e8e8e8 35%, #b8b8b8 50%, #f5f5f5 65%, #4a4a4a 85%, #1a1a1a 100%);
+        aspect-ratio: 1.294 / 1;
+        padding: 0;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        container-type: inline-size;
+    }
+
+    .passe-checkout__header::before {
+        content: 'Platinum';
+        position: absolute;
+        font-size: 22cqw;
+        color: rgba(74, 74, 74, 0.15);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: Arial, sans-serif;
+        letter-spacing: 0.8cqw;
+        text-align: center;
+        white-space: nowrap;
+    }
+
+    .passe-checkout__logo {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        padding: 0 4cqw;
+    }
+
+    .passe-checkout__logo-title {
+        font-size: 19cqw !important;
+        font-weight: 700 !important;
+        color: white !important;
+        letter-spacing: -0.15cqw !important;
+        margin: 0 0 -2cqw 0 !important;
+        text-shadow: 0.3cqw 0.3cqw 1.3cqw rgba(0, 0, 0, 0.3) !important;
+        white-space: nowrap !important;
+        line-height: 1 !important;
+        text-transform: none !important;
+    }
+
+    .passe-checkout__logo-dot {
+        display: inline-block;
+        width: 1.3cqw;
+        height: 1.3cqw;
+        background-color: white;
+        border-radius: 50%;
+        margin: 0 0.65cqw;
+        vertical-align: baseline;
+    }
+
+    .passe-checkout__logo-subtitle {
+        font-size: 2.6cqw;
+        letter-spacing: 0.16cqw;
+        background: white;
+        color: #2d2d2d;
+        padding: 1.3cqw 2.6cqw;
+        border-radius: 8cqw;
+        display: inline-block;
+        text-shadow: none;
+        line-height: 1.2;
+    }
+
+    /* Testimonials */
+    .passe-testimonials {
+        padding: 40px 30px 20px 30px;
+    }
+
+    .passe-testimonials__title {
+        font-size: 18px;
+        color: #2d2d2d;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 6px;
+    }
+
+    .passe-testimonials__subtitle {
+        font-size: 13px;
+        color: #777;
+        text-align: center;
+        margin-bottom: 28px;
+    }
+
+    .passe-testimonial {
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+        margin-bottom: 20px;
+    }
+
+    .passe-testimonial__video {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%;
+        background: #000;
+    }
+
+    .passe-testimonial__video iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
+
+    .passe-testimonial__body {
+        padding: 16px 20px 18px 20px;
+    }
+
+    .passe-testimonial__name {
+        font-size: 15px;
+        font-weight: 600;
+        color: #2d2d2d;
+        margin-bottom: 2px;
+    }
+
+    .passe-testimonial__role {
+        font-size: 12px;
+        color: #999;
+        margin-bottom: 8px;
+    }
+
+    .passe-testimonial__quote {
+        font-size: 14px;
+        color: #555;
+        font-style: italic;
+        line-height: 1.5;
+    }
+
+    /* Guarantee */
+    .passe-checkout__guarantee {
+        text-align: center;
+        padding: 10px 30px 40px 30px;
+    }
+
+    .passe-checkout__guarantee img {
+        max-width: 100%;
+        height: auto;
+        max-height: 150px;
+    }
+
+    /* Right Panel */
+    .samcart-panel {
+        background: white;
+        padding: 40px 20px 40px 0px;
+        overflow-y: auto;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .samcart-container {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    sc-checkout {
+        display: block !important;
+        width: 100% !important;
+    }
+
+    .pt-2.px-4.max-w-xl.w-full.mx-auto.flex.flex-col.sm\:px-16.md\:pl-16.md\:pr-6.md\:mx-0.md\:pt-12.lg\:pr-16 {
+        display: none !important;
+    }
+
+    .grid.grid-cols-2.gap-0.grid-rows-\[auto_1fr\] {
+        grid-template-columns: 1fr !important;
+    }
+
+    .col-span-2.flex.flex-col.md\:col-span-1 {
+        max-width: 100% !important;
+    }
+
+    .col-span-2.flex.flex-col.md\:col-span-1 > div {
+        padding-top: 0 !important;
+    }
+
+    @media (max-width: 1200px) {
+        .checkout-wrapper {
+            grid-template-columns: 1fr;
+        }
+        .passe-checkout { padding: 30px 20px; }
+        .samcart-panel { padding: 30px 20px; }
+    }
+
+    @media (max-width: 768px) {
+        .passe-testimonials { padding: 30px 16px 10px 16px; }
+        .passe-checkout__guarantee { padding: 10px 16px 30px 16px; }
+    }
+
+    /* Force modal to top, kill backdrop */
+    .ui-library-styles-r5tl5b {
+        top: 20% !important;
+    }
+
+    .ui-library-styles-jsltdt {
+        background-color: rgba(0, 0, 0, 0) !important;
+    }
+</style>
+
+<div class="checkout-wrapper">
+    <!-- Left Panel -->
+    <div class="passe-checkout">
+        <div class="passe-checkout__container">
+            <div class="passe-checkout__card">
+
+                <!-- Logo Header -->
+                <div class="passe-checkout__header">
+                    <div class="passe-checkout__logo">
+                        <h1 class="passe-checkout__logo-title">P<span class="passe-checkout__logo-dot"></span>A<span class="passe-checkout__logo-dot"></span>S<span class="passe-checkout__logo-dot"></span>S<span class="passe-checkout__logo-dot"></span>E</h1>
+                        <p class="passe-checkout__logo-subtitle">Programme D'Accompagnement Pour Le Succès En Anglais</p>
+                    </div>
+                </div>
+
+                <!-- Testimonials -->
+                <div class="passe-testimonials">
+                    <h2 class="passe-testimonials__title">Ils ont transformé leur anglais</h2>
+                    <p class="passe-testimonials__subtitle">Ces étudiants font partie des milliers qui ont changé leur vie</p>
+
+                    <div class="passe-testimonial">
+                        <div class="passe-testimonial__video">
+                            <iframe src="https://fast.wistia.net/embed/iframe/uvx7r224a9" allow="autoplay; fullscreen" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" msallowfullscreen></iframe>
+                        </div>
+                        <div class="passe-testimonial__body">
+                            <div class="passe-testimonial__name">Sonia Ravin</div>
+                            <div class="passe-testimonial__role">Étudiante KodjoEnglish</div>
+                            <div class="passe-testimonial__quote">"Rejoindre le programme a littéralement changé ma vie"</div>
+                        </div>
+                    </div>
+
+                    <div class="passe-testimonial">
+                        <div class="passe-testimonial__video">
+                            <iframe src="https://fast.wistia.net/embed/iframe/dp0t10tu2v" allow="autoplay; fullscreen" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" msallowfullscreen></iframe>
+                        </div>
+                        <div class="passe-testimonial__body">
+                            <div class="passe-testimonial__name">Malick Soumaré</div>
+                            <div class="passe-testimonial__role">Étudiant KodjoEnglish</div>
+                            <div class="passe-testimonial__quote">"Ce programme est pour ceux qui souhaitent devenir une meilleure version d'eux-mêmes."</div>
+                        </div>
+                    </div>
+
+                    <div class="passe-testimonial">
+                        <div class="passe-testimonial__video">
+                            <iframe src="https://fast.wistia.net/embed/iframe/i85gpceszo" allow="autoplay; fullscreen" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" msallowfullscreen></iframe>
+                        </div>
+                        <div class="passe-testimonial__body">
+                            <div class="passe-testimonial__name">Ikram Dekhissi</div>
+                            <div class="passe-testimonial__role">Étudiante KodjoEnglish</div>
+                            <div class="passe-testimonial__quote">"Je me suis exprimée en anglais pendant une heure à un entretien d'embauche"</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Guarantee -->
+                <div class="passe-checkout__guarantee">
+                    <img src="http://kopilot.kodjoe.com/static/img/guarantee.png" alt="Garantie 100% satisfaction">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Right Panel - SamCart -->
+    <div class="samcart-panel">
+        <div class="samcart-container">
+            <sc-checkout product="platinum" subdomain="kodjoenglish" coupon=""></sc-checkout>
+        </div>
+    </div>
+</div>
+
+<script>
+(function() {
+    setInterval(function() {
+        var iframe = document.querySelector('sc-checkout iframe');
+        if (!iframe || !iframe.contentDocument) return;
+        var doc = iframe.contentDocument;
+
+        var modal = doc.querySelector('.ui-library-styles-r5tl5b');
+        if (modal) modal.style.top = '20%';
+
+        var backdrop = doc.querySelector('.ui-library-styles-jsltdt');
+        if (backdrop) backdrop.style.backgroundColor = 'rgba(0, 0, 0, 0)';
+    }, 16);
+})();
+</script>

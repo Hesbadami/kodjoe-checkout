@@ -1,5 +1,4 @@
-
-    <script defer="defer" src="https://static.samcart.com/checkouts/sc-checkout.js"></script>
+<script defer="defer" src="https://static.samcart.com/checkouts/sc-checkout.js"></script>
     <style>
 
         body {
@@ -95,11 +94,11 @@
             letter-spacing: 1px;
 
             background: white;
-            color: #2d2d2d;  /* Change text color to dark */
+            color: #2d2d2d;
             padding: 8px 16px;
             border-radius: 50px;
             display: inline-block;
-            text-shadow: none;  /* Remove the text shadow */
+            text-shadow: none;
         }
         .passe-checkout__guarantee {
             text-align: center !important;
@@ -133,6 +132,62 @@
 
         .passe-checkout__summary {
             padding: 50px 40px 30px 40px;
+        }
+
+        /* Billing Toggle */
+        .passe-billing-toggle {
+            display: flex;
+            gap: 8px;
+            background: #ececec;
+            padding: 6px;
+            border-radius: 14px;
+            margin-bottom: 30px;
+        }
+        .passe-billing-toggle__option {
+            flex: 1;
+            background: transparent;
+            border: none;
+            padding: 14px 12px;
+            border-radius: 10px;
+            font-family: inherit;
+            font-size: 14px;
+            font-weight: 600;
+            color: #777;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            transition: all 0.2s ease;
+            line-height: 1.3;
+        }
+        .passe-billing-toggle__option small {
+            display: block;
+            font-size: 12px;
+            font-weight: 500;
+            color: #999;
+            margin-top: 3px;
+        }
+        .passe-billing-toggle__option.is-active {
+            background: white;
+            color: #2d2d2d;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .passe-billing-toggle__option.is-active small {
+            color: #555;
+        }
+        .passe-billing-toggle__option:hover:not(.is-active) {
+            color: #2d2d2d;
+        }
+        .passe-billing-toggle__save {
+            display: inline-block;
+            background: #16a34a;
+            color: white;
+            font-size: 10px;
+            font-weight: 700;
+            padding: 2px 6px;
+            border-radius: 8px;
+            margin-left: 4px;
+            vertical-align: middle;
         }
 
         .passe-checkout__summary-title {
@@ -255,33 +310,27 @@
             max-width: 600px;
         }
 
-        /* Control iframe to prevent extra vertical space */
         sc-checkout {
             display: block !important;
             width: 100% !important;
         }
 
-        /* Hide the entire left column section inside SamCart iframe */
         .pt-2.px-4.max-w-xl.w-full.mx-auto.flex.flex-col.sm\:px-16.md\:pl-16.md\:pr-6.md\:mx-0.md\:pt-12.lg\:pr-16 {
             display: none !important;
         }
 
-        /* Make the iframe use single column layout and expand right side */
         .grid.grid-cols-2.gap-0.grid-rows-\[auto_1fr\] {
             grid-template-columns: 1fr !important;
         }
 
-        /* Ensure the right column takes full width */
         .col-span-2.flex.flex-col.md\:col-span-1 {
             max-width: 100% !important;
         }
 
-        /* Remove top padding from the right column */
         .col-span-2.flex.flex-col.md\:col-span-1 > div {
             padding-top: 0 !important;
         }
 
-        /* Responsive Design */
         @media (max-width: 1200px) {
             .checkout-wrapper {
                 grid-template-columns: 1fr;
@@ -334,6 +383,14 @@
                 line-height: 1.5 !important;
                 text-align: left !important;
             }
+
+            .passe-billing-toggle__option {
+                font-size: 13px;
+                padding: 12px 8px;
+            }
+            .passe-billing-toggle__option small {
+                font-size: 11px;
+            }
         }
 
         /* Force modal to top, kill backdrop */
@@ -365,6 +422,18 @@
                     <!-- Order Summary -->
                     <div class="passe-checkout__summary">
                         <h2 class="passe-checkout__summary-title">Votre commande</h2>
+
+                        <!-- Billing Toggle -->
+                        <div class="passe-billing-toggle">
+                            <a href="/gold" class="passe-billing-toggle__option is-active">
+                                Mensuel
+                                <small>€297 / mois</small>
+                            </a>
+                            <a href="/gold-6x" class="passe-billing-toggle__option">
+                                Mensuel (6 mois prépayés) <span class="passe-billing-toggle__save">−20%</span>
+                                <small>Économisez €357 sur 6 mois</small>
+                            </a>
+                        </div>
                         
                         <div class="passe-checkout__item">
                             <span class="passe-checkout__item-name">PASSE Gold</span>
@@ -392,7 +461,7 @@
                         <div class="passe-checkout__notice">
                             <div class="passe-checkout__notice-title">Récapitulatif des conditions tarifaires:</div>
                             <div class="passe-checkout__notice-text">
-                                <b>Votre inscription sera validée par le règlement du premier versement de €297</b>. Elle sera suivie de 5 mensualités de €297, prélevées automatiquement. À l'issue de cette période, l'accès au service se poursuivra via un abonnement mensuel de €99, prélevé automatiquement, sans engagement de durée, et résiliable à tout moment conformément aux conditions applicables.
+                                <b>Votre inscription sera validée par le règlement du premier versement de €297</b>. Elle sera suivie de 5 mensualités de €297, prélevées automatiquement.
                             </div>
                         </div>
 
