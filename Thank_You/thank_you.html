@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenue au Programme P.A.S.S.E Gold | KodjoEnglish</title>
+    <meta name="description" content="Félicitations pour votre inscription au programme P.A.S.S.E Gold. Réservez votre évaluation de niveau.">
+    <script src="https://fast.wistia.com/embed/medias/u7sa5d13c3.jsonp" async></script>
+    <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
+    <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+    <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #fff;
+            min-height: 100vh;
+            color: #1a1a1a;
+        }
+
+        /* Confetti */
+        .confetti-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1000;
+            overflow: hidden;
+        }
+
+        .confetti {
+            position: absolute;
+            top: -20px;
+            animation: fall linear forwards;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(100vh) rotate(720deg);
+            }
+        }
+
+        .page-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .video-container {
+            width: 100%;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+
+        .wistia_embed {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+        }
+
+        .booking-section {
+            text-align: center;
+        }
+
+        .booking-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+    
+
+        .booking-description {
+            margin-top: 24px;
+            font-size: 16px;
+            color: #555;
+            max-width: 500px;
+        }
+
+        #calendar-button button,
+        #calendar-button + button,
+        button.qxCTlb {
+            font-size: 28px !important;
+            padding: 22px 48px !important;
+            border-radius: 10px !important;
+            font-weight: 600 !important;
+            background-color: #D50000 !important;
+            color: #fff !important;
+            border: none !important;
+        }
+
+        @media (max-width: 768px) {
+            .page-wrapper {
+                padding: 40px 16px;
+            }
+
+            .booking-title {
+                font-size: 20px;
+            }
+
+            .booking-description {
+                font-size: 15px;
+            }
+
+            #calendar-button button,
+            #calendar-button + button,
+            button.qxCTlb {
+                font-size: 20px !important;
+                padding: 16px 32px !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="confetti-container" id="confetti"></div>
+
+    <div class="page-wrapper">
+        <div class="video-container">
+            <div class="wistia_embed wistia_async_u7sa5d13c3 videoFoam=true"></div>
+        </div>
+
+        <div class="booking-section">
+            <div id="calendar-button"></div>
+            <p class="booking-description">Cet appel nous permettra d'évaluer et de déterminer votre niveau d'anglais</p>
+        </div>
+    </div>
+
+    <script>
+        const colors = ['#4285f4', '#ea4335', '#fbbc04', '#34a853', '#ff6d01', '#46bdc6'];
+        const container = document.getElementById('confetti');
+        
+        function createConfetti() {
+            for (let i = 0; i < 150; i++) {
+                setTimeout(() => {
+                    const confetti = document.createElement('div');
+                    confetti.className = 'confetti';
+                    confetti.style.left = Math.random() * 100 + 'vw';
+                    confetti.style.width = Math.random() * 10 + 5 + 'px';
+                    confetti.style.height = Math.random() * 6 + 4 + 'px';
+                    confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
+                    confetti.style.borderRadius = Math.random() > 0.5 ? '50%' : '2px';
+                    confetti.style.animationDuration = Math.random() * 2 + 2 + 's';
+                    confetti.style.animationDelay = Math.random() * 0.5 + 's';
+                    confetti.style.opacity = Math.random() * 0.7 + 0.3;
+                    container.appendChild(confetti);
+                    
+                    setTimeout(() => confetti.remove(), 4500);
+                }, i * 20);
+            }
+        }
+        
+        createConfetti();
+        setTimeout(createConfetti, 1500);
+
+        // Google Calendar Button
+        window.addEventListener('load', function() {
+            calendar.schedulingButton.load({
+                url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ3HYjsyaQuHsrJ0KKcOSdn3LcMJY58vFqHpGpn60TW86D9xgF-qlzLw1FsBZ96hXTg7ZQ0LH73Z?gv=true',
+                color: '#D50000',
+                label: 'Réservez votre créneau',
+                target: document.getElementById('calendar-button'),
+            });
+        });
+    </script>
+</body>
+</html>

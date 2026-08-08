@@ -1,0 +1,48 @@
+CEFR : message WhatsApp de confirmation post-achat
+==================================================
+
+Envoyé juste après le paiement, en complément de l'email.
+Placeholders au format kopilot_value_1..4 (durables.send.whatsapp).
+
+  kopilot_value_1 = prénom du client
+  kopilot_value_2 = lien SSO du test (sso_url)
+  kopilot_value_3 = date d'expiration au format JJ/MM/AAAA (achat + 7 jours)
+  kopilot_value_4 = heure d'expiration au format HH:MM (optionnel)
+
+
+MESSAGE
+-------
+
+Bonjour {{kopilot_value_1}}, votre paiement est confirmé. Votre accès au test CECRL officiel est prêt.
+
+*ATTENTION : votre accès expire le {{kopilot_value_3}}.*
+
+Votre lien est valable 7 jours calendaires à compter d'aujourd'hui. Passé cette date, l'accès est automatiquement révoqué et le test ne peut plus être passé. Aucune prolongation n'est possible.
+
+Réservez dès maintenant 45 minutes au calme dans votre semaine.
+
+Votre lien : {{kopilot_value_2}}
+
+À la fin du test, votre niveau s'affiche immédiatement avec vos équivalences TOEFL, TOEIC et IELTS, puis Kodjo vous explique en vidéo ce que ce niveau signifie pour vous.
+
+
+RAPPEL J+5 (facultatif, si le test n'a pas été passé)
+----------------------------------------------------
+
+Bonjour {{kopilot_value_1}}, votre test CECRL n'a pas encore été passé.
+
+*Il vous reste 2 jours. Votre accès expire le {{kopilot_value_3}}.*
+
+Après cette date, le lien ne fonctionnera plus et le test sera perdu. 45 minutes suffisent.
+
+Votre lien : {{kopilot_value_2}}
+
+
+NOTES
+-----
+
+- Le gras WhatsApp s'écrit avec des astérisques (*texte*), pas avec du HTML.
+- La date explicite ({{kopilot_value_3}}) est ce qui protège du litige. Un client peut
+  contester "7 jours", il ne peut pas contester une date qu'il a reçue par écrit.
+- Le rappel J+5 est le levier le plus efficace contre les demandes de remboursement
+  "je n'ai pas eu le temps". À déclencher uniquement si aucun résultat n'est enregistré.
